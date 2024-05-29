@@ -1,3 +1,4 @@
+
 html, body{ /*resetting margins or padding that the browser may apply by default. Wanting to have navbar background color span the width and height of the viewport without a border */
   margin: 0;
   padding:0;
@@ -116,19 +117,11 @@ html, body{ /*resetting margins or padding that the browser may apply by default
     margin-top: 125px;
   }
 
-  /*.image-about{*/
-      /*width: 100%;*/
-      /*box-sizing: border-box;*/
-  
-
   .image-about img{
     border-top-right-radius: 80px;
     border-bottom-left-radius: 80px;
     margin-right: 36.5px;
     margin-top:0;
-    max-width: 100%;
-    height: auto;
-
   }
 
   .paragraph-about{
@@ -178,10 +171,6 @@ html, body{ /*resetting margins or padding that the browser may apply by default
     padding-left: 0;
   }
 
-  .responsive-break-one{
-    display: none;
-  }
-
   .title-skills {
     font-family:'Oswald', sans-serif;
     font-size:94px;
@@ -205,17 +194,22 @@ html, body{ /*resetting margins or padding that the browser may apply by default
     font-weight:medium;
     letter-spacing:1%;
     text-align: justify;
-    margin-bottom: 80px;
     /*border:5px solid black;*/
   }
+/*End of Styling Skills & Softwares Section */
 
+
+
+
+/* Styling Skills & Softwares Image */
   .image-skills{
     display: flex;
     align-items: center;
     justify-content:center;
+    margin-top: 80px;
   }
-
-/*End of Styling Skills & Softwares Section */
+/*End of Styling Skills & Softwares Image*/
+  
 
 
 
@@ -234,10 +228,6 @@ html, body{ /*resetting margins or padding that the browser may apply by default
     margin-top:150px;
     margin-bottom: 100px;
     padding-bottom:0;
-  }
-
-  .responsive-break-two , .responsive-break-three {
-    display: none;
   }
 
   .section-title-one , .section-title-two {
@@ -277,8 +267,8 @@ html, body{ /*resetting margins or padding that the browser may apply by default
     white-space: nowrap;
   }
 
-  
-  .footer-navbar ul{ /* Creating a Horizontal Footer Navbar*/
+  /* Creating a Horizontal Footer Navbar*/
+  .footer-navbar ul{
     display: flex; 
     justify-content: center; 
     list-style-type: none; 
@@ -287,15 +277,16 @@ html, body{ /*resetting margins or padding that the browser may apply by default
     height: 100%; 
   }
 
-  
-  .footer-navbar ul li { /*Using to position children elements aka everything in li relative to each other*/
+  /*Using to position children elements aka everything in li relative to each other*/
+  .footer-navbar ul li {
     position: relative; /*using this to position any children elements aka <a> elements in the .footer-navbar */
   }
 
   .footer-navbar ul li:last-child {
     margin-right: 0; /*making sure there is no margin on the last list item so that the list stays centered vertically*/
   }
-  
+
+  /*Styling all the links in the .footer-navbar to be the same*/
   .footer-navbar a{ 
     color:#ffffff; 
     text-decoration: none; 
@@ -304,189 +295,6 @@ html, body{ /*resetting margins or padding that the browser may apply by default
     padding: 0 40px;
     position: relative; 
     overflow: hidden; 
-  }
-
-  .footer-navbar a::before { 
-    content: ''; 
-    position: absolute;
-    top: 0; 
-    bottom:0; 
-    left:0px; 
-    right:0px; 
-    background-color: transparent; 
-    z-index: -1; 
-    transition: background-color 0.3s; 
-  }
-
-  .footer-navbar li a:hover {
-    background-color: #555; 
-  }
-
- 
-/*End of Footer Navbar Styling*/
-
-
-
-
-/* Responsive Design */
-
-  @media (max-width:738px) { /*Responsive Design for the navbar when shrinking*/
-    .navbar ul li a {
-      padding: 0 24px;
-      font-size: 18px;
-    }
-  } 
-  
-  @media (max-width: 738px) {
-    .header {
-        font-size: 35px;
-    }
-
-    .header-container{
-        margin-top: 15px;
-    }
-  }
-    
-
-
-  @media (max-width: 738px) {
-    .third-row {
-      flex-direction: column; /* Stacks the flex children vertically */
-      align-items: center; /* Centers the items vertically in the container */
-      margin-top: 30px;
-    }
-    .title-about {
-      font-size: 54px;
-      margin-left: 60px;
-      padding:0;
-      margin-top: 50px;
-    }
-
-    .image-about {
-      padding: 0 20px;
-      padding-bottom:0;
-      margin-bottom:0;
-    }
-
-    .image-about img { 
-      width: 390px;
-      height: auto;
-    }
-
-    .paragraph-about {
-      font-size: 16px;
-      width: auto;
-      height:auto;
-      margin: auto;
-      margin-top: 20px;
-      padding: 0 60px;
-    }
-  }
-   
-  
-
- @media (max-width: 738px) {
-
-    .fourth-row {
-    margin-top: 100px;
-    }
-
-    .responsive-break-one {
-      display: block;
-    }
-
-    .title-skills {
-    font-size: 54px;
-    padding:0 60px;
-    }
-
-    .paragraph-skills {
-    font-size: 16px;
-    width: auto;
-    height:auto;
-    margin-bottom:0;
-    padding-bottom:0;
-    margin-top: 20px;
-    padding: 0 60px;
-    margin-bottom: 50px;
-    }
-
-    .image-skills img {
-    width: 356px;
-    height: 177px;
-    padding-top: 0;
-    }
-  }
- 
-
-
-  @media(max-width:738px){
-    
-    .title-case-studies {
-      font-size: 54px;
-      margin-top:100px;
-      margin-bottom: 50px;
-      margin-left: 20px;
-      padding-left: 0;
-    }
-
-    .responsive-break-two , .responsive-break-three {
-      display: block;
-    }
-
-    .section-title-one , .section-title-two {
-      width:100%;
-      font-size: 34px;
-      white-space: normal;
-      line-height:1.2;
-      margin-left: 20px;
-      padding-left: 0;
-    } 
-
-    .case-studies {
-      margin-left: 0;
-    }
-    .first-case-study img {
-      margin-left: 0;
-    }
-
-    .second-case-study img {
-      margin-left: 20px;
-      padding-left: 0;
-    }
-
-    .first-case-study img , .second-case-study img {
-      margin-top: 20px;
-      margin-bottom: 50px;
-      padding-left: 0;
-    }
-  }
-  
-
-  /* Media Query for Footer Navbar */
-  @media (max-width: 738px){
-    footer, .footer-navbar {
-      background-color: #1c1c1c;
-      height: auto;
-    }
-    
-    .footer-navbar ul{
-      flex-direction:column; /*Stack list items vertically when window is shrunk */
-      align-items: center; /* Aligining items in the center vertically */
-    }
-
-    .footer-navbar ul li{
-      margin-bottom: 0px;
-    }
-
-    .footer-navbar ul li:last-child {
-      margin-bottom: 0;
-    }
-
-    .footer-navbar a {
-      font-size: 18px;
-      padding: 0px 24px;
-    }
   }
     
 
