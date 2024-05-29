@@ -296,8 +296,21 @@ html, body{ /*resetting margins or padding that the browser may apply by default
     position: relative; 
     overflow: hidden; 
   }
-    
 
+  .footer-navbar a::before { 
+    content: ''; 
+    position: absolute;
+    top: 0; 
+    bottom:0; 
+    left:0px; 
+    right:0px; 
+    background-color: transparent; 
+    z-index: -1; 
+    transition: background-color 0.3s; 
+  }
 
-
+  .footer-navbar li a:hover {
+    background-color: #555; 
+  }
+/*End of Footer Navbar Styling*/
 
